@@ -77,6 +77,17 @@ header a:hover{
   font-weight: bold;
 }
 
+.header-info {
+  background-color: var(--overlay-color);
+  color: #ffffff;
+  padding-top: 0px;
+  min-height: 40px;
+  border-bottom: var(--primary-color) 3px solid;
+  text-align: center;
+}
+
+
+
 /*Showcase*/
 .showcase{
   min-height: 75vh;
@@ -121,11 +132,17 @@ header a:hover{
   margin-top: 20px;
 }
 
-.boxes .box{
-  float: left;
-  width: 30%;
+.container-boxes {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.box-1 {
   padding: 10px;
   text-align: center;
+  flex: 1;
 }
 
 /*Sidebar*/
@@ -166,6 +183,10 @@ footer{
 
   header{
     padding-bottom: 20px;
+  }
+
+  .container-boxes {
+    flex-direction: column;
   }
 
   .showcase h1{
