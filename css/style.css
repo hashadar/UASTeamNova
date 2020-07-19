@@ -16,6 +16,15 @@ ul {
   list-style: none;
 }
 
+a{
+  color: lightgray;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid lightgray;
+}
+
 .container {
   width: 90%;
   max-width: 1100px;
@@ -140,9 +149,63 @@ ul {
   border-bottom: 1px solid lightgray;
 }
 
+.page-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background: black;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.links h2 {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.links ul li {
+  padding: 10px 0px;
+  border-bottom: rgb(75, 75, 75) 1px solid;
+}
+
+.links ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  margin: 20px 0;
+}
+
+.profile-intro h3 {
+  padding: 0 0 10px 0;
+}
+
+.box-1 p {
+  padding-bottom: 14px;
+}
+
+.modules {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.module-r {
+  text-align: end;
+}
+
 .footer {
-  background: lightgray;
-  color: black;
+  background: black;
+  color: lightgray;
   font-size: 12px;
   padding: 20px 0;
 }
@@ -150,8 +213,8 @@ ul {
 .footer-inner {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
   padding: 0 20px 0 20px;
+  margin: 0 auto;
   display: flex;
   align-items: center; 
   justify-content: space-between;
@@ -224,5 +287,24 @@ ul {
   .cards img {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .profile-intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    margin: 20px 0;
+  }
+
+  .modules {
+    display: grid;
+  }
+
+  .module-l {
+    padding-bottom: 14px;
+  }
+
+  .module-r {
+    text-align: left;
   }
 }
