@@ -7,11 +7,39 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Hasha Dar">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <title>Hasha Dar | Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  <div class="container">
+    <nav class="main-nav">
+      <img src="./img/LogoHDP3White.png" alt="Hasha Dar" class="logo">
+
+      <ul class="main-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Photography</a></li>
+      </ul>
+
+      <ul class="right-menu">
+        <li>
+          <a href="https://www.instagram.com/hashadar/"><i class="fab fa-instagram" target="blank"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100010145407142" target="blank"><i
+              class="fab fa-facebook-square"></i></a>
+          <a href="https://www.linkedin.com/in/hashadar/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
   <header class="showcase">
     <h1>Hasha Dar</h1>
     <p>
@@ -19,23 +47,48 @@
     </p>
   </header>
 
-  <section class="section-a">
-    <h2>Profile</h2>
-    <p>academic stuff etc insert</p>
-    <a href="#" class="button">Click to view</a>
-  </section>
+  <div class="container">
+    <section class="cards">
+      <div>
+        <img src="./img/academicpic.png" alt="Profile">
+        <h3>Profile</h3>
+        <p>Academic stuff insert</p>
+        <a href="#">Click to view</a>
+      </div>
+      <div>
+        <img src="./img/projectpic.png" alt="Profile">
+        <h3>Project Work</h3>
+        <p>Project stuff insert</p>
+        <a href="#">Click to view</a>
+      </div>
+      <div>
+        <img src="./img/profilepic.jpg" alt="Profile">
+        <h3>Photography</h3>
+        <p>Photography stuff insert</p>
+        <a href="#">Click to view</a>
+      </div>
+    </section>
+  </div>
 
-  <section class="section-b">
-    <h2>Project Work</h2>
-    <p>Project stuff etc insert</p>
-    <a href="#" class="button">Click to view</a>
-  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p>Hasha Dar &copy; 2020</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">item 1</a></li>
+          <li><a href="#">item 2</a></li>
+          <li><a href="#">item 3</a></li>
+          <li><a href="#">item 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
-  <section class="section-c">
-    <h2>Photography Portfolio </h2>
-    <p>Photography stuff etc insert</p>
-    <a href="https://hashadar.com/" class="button">Click to view</a>
-  </section>
+  <script>
+    document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+  </script>
 </body>
 
 </html>

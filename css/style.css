@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -8,13 +9,74 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   color: lightgray;
+  background: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background: black;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  font-size: 14px;
+  padding: 1vh;
+}
+
+.main-nav .logo {
+  width: 150px;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav ul li {
+  padding: 0 10px;
+}
+
+.main-nav ul li i {
+  padding: 0 5px;
+}
+
+.main-nav ul li a {
+  color: lightgray;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 1px solid lightgray;
+}
+
+.main-nav ul.main-menu {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.menu-btn {
+  cursor: pointer;
+  position:absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 3;
+  display: none;
 }
 
 .showcase {
-  background-image: url('../img/20200521-DSCF1047.jpg');
+  background-image: url('../img/showcase.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 86vh;
   display: flex; 
   flex-direction: column;
   justify-content: center;
@@ -26,12 +88,12 @@ body{
 .showcase:after {
   content: '';
   position: absolute;
-  top: 0;
+  top: 15vh;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 86vh;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   box-shadow: inset 60px 50px 200px black, inset -60px -50px 200px black;
 }
 
@@ -45,70 +107,122 @@ body{
   z-index: 2;
 }
 
-.section-a {
-  padding: 0 20px;
-  height: 25vh;
-  color: lightgray;
-  background: black;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin: 20px 0;
 }
 
-.section-a .button, .section-c .button {
+.cards img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cards h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.cards p {
   font-size: 14px;
-  text-decoration: none;
-  color: lightgray;
-  padding: 10px 20px;
-  border: lightgray 1px solid;
-  border-radius: 5px;
-  padding: 7px 14px;
-  margin: 10px 20px;
 }
 
-.section-a .button:hover, .section-c .button:hover{
+.cards a{
+  display: inline-block;
+  padding-top: 10px;
+  color: lightgray;
+  text-decoration: none;
+  font-size: 14px
+}
+
+.cards a:hover {
+  border-bottom: 1px solid lightgray;
+}
+
+.footer {
   background: lightgray;
   color: black;
+  font-size: 12px;
+  padding: 20px 0;
 }
 
-.section-b {
-  padding: 20px;
-  height: 25vh;
-  color: black;
-  background: lightgray;
-  text-align: center;
+.footer-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.footer div {
+  margin-bottom: 0px;
+  display: flex;
   align-items: center;
 }
 
-.section-b .button{
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  border: black 1px solid;
-  border-radius: 5px;
-  padding: 7px 14px;
-  margin: 10px 20px;
+.footer ul {
+  display: none;
+  flex-wrap: wrap;
 }
 
-.section-b .button:hover{
-  background: black;
-  color: lightgray;
+.footer li {
+  margin-right: 30px;
+  margin-bottom: 0px;
 }
 
-.section-c {
-  padding: 20px;
-  height: 25vh;
-  color: lightgray;
-  background: black;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media(max-width: 700px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+
+  .main-nav ul.right-menu {
+    margin-right: 50px;
+  }
+
+  .main-nav ul.main-menu {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 50%;
+    height: 100%;
+    border-right: rgb(75, 75, 75) 3px solid;
+    opacity: 0.9;
+    padding: 30px;
+    transform: translateX(-500px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .main-nav ul.main-menu li {
+    padding: 10px;
+    border-bottom: rgb(75, 75, 75) 1px solid;
+    font-size: 14px;
+  }
+
+  .main-nav ul.main-menu li:last-child {
+    border-bottom: 0;
+  }
+
+  .main-nav ul.main-menu.show {
+    transform: translateX(-20px)
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 20px 50px;
+  }
+
+  .cards img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
