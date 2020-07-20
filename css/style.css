@@ -180,7 +180,7 @@ a:hover {
 
 .profile-intro {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 40px;
   margin: 20px 0;
 }
@@ -189,8 +189,21 @@ a:hover {
   padding: 0 0 10px 0;
 }
 
-.box-1 p {
+.box-1 p, .box-2 p, .box-3 p, .box-4 p {
   padding-bottom: 14px;
+}
+
+.box-3{
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.box-3 .logos {
+  display: none;
+  width: 50%;
 }
 
 .modules {
