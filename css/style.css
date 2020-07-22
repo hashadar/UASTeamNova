@@ -111,6 +111,11 @@ a:hover {
   z-index: 2;
 }
 
+.showcase .logo-showcase {
+  width: 400px;
+  z-index: 2;
+}
+
 .showcase p {
   font-size: 20px;
   z-index: 2;
@@ -199,6 +204,15 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: left;
+}
+
+.box-3 ul li h5 {
+  display: inline;
+  font-size: 15px;
+}
+
+.box-3 ul li:last-child {
+  padding-bottom: 14px;
 }
 
 .box-3 .logos {
