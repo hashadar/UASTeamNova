@@ -67,6 +67,10 @@ a:hover {
   border-bottom: 1px solid lightgray;
 }
 
+.main-nav a:hover {
+  border-bottom: none;
+}
+
 .main-nav ul.main-menu {
   flex: 1;
   margin-left: 20px;
@@ -126,6 +130,7 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   margin: 20px 0;
+  align-items: center;
 }
 
 .cards img {
@@ -192,6 +197,14 @@ a:hover {
 
 .profile-intro h3 {
   padding: 0 0 10px 0;
+}
+
+.profile-intro a {
+  color: darkgray;
+}
+
+.profile-intro a:hover {
+  color: lightgray;
 }
 
 .box-1 p, .box-2 p, .box-3 p, .box-4 p {
