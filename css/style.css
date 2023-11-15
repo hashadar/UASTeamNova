@@ -1,350 +1,184 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset some basic elements */
+h1,
+h2,
+h3 {
+    font-family: 'Italiana', serif;
 }
 
-body{
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  color: lightgray;
-  background: black;
+body,
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
-ul {
-  list-style: none;
+* {
+    box-sizing: border-box;
 }
 
-a{
-  color: lightgray;
-  text-decoration: none;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Hide horizontal scroll */
 }
 
-a:hover {
-  border-bottom: 1px solid lightgray;
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  background: black;
+/* Basic styling */
+body {
+    margin: 0;
+    /* Removes the default margin provided by the browser */
+    padding: 0;
+    /* Removes the default padding provided by the browser */
+    background-color: #212529;
+    /* Sets the background color of the page */
+    font-family: 'Roboto', sans-serif;
+    /* Sets the default font for the page */
 }
 
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 15vh;
-  font-size: 14px;
-  padding: 1vh;
-}
-
-.main-nav .logo {
-  width: 150px;
-}
-
-.main-nav ul {
-  display: flex;
-}
-
-.main-nav ul li {
-  padding: 0 10px;
-}
-
-.main-nav ul li i {
-  padding: 0 5px;
-}
-
-.main-nav ul li a {
-  color: lightgray;
-  text-decoration: none;
-  padding-bottom: 2px;
-}
-
-.main-nav ul li a:hover {
-  border-bottom: 1px solid lightgray;
-}
-
-.main-nav a:hover {
-  border-bottom: none;
-}
-
-.main-nav ul.main-menu {
-  flex: 1;
-  margin-left: 20px;
-}
-
-.menu-btn {
-  cursor: pointer;
-  position:absolute;
-  top: 32px;
-  right: 32px;
-  z-index: 3;
-  display: none;
-}
-
-.showcase {
-  background-image: url('../img/showcase.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 86vh;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.showcase:after {
-  content: '';
-  position: absolute;
-  top: 15vh;
-  left: 0;
-  width: 100%;
-  height: 86vh;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.4);
-  box-shadow: inset 60px 50px 200px black, inset -60px -50px 200px black;
-}
-
-.showcase h1 {
-  font-size: 60px;
-  z-index: 2;
-}
-
-.showcase .logo-showcase {
-  width: 400px;
-  z-index: 2;
-}
-
-.showcase p {
-  font-size: 20px;
-  z-index: 2;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
-  margin: 20px 0;
-  align-items: center;
-}
-
-.cards img {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.cards h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.cards p {
-  font-size: 14px;
-}
-
-.cards a{
-  display: inline-block;
-  padding-top: 10px;
-  color: lightgray;
-  text-decoration: none;
-  font-size: 14px
-}
-
-.cards a:hover {
-  border-bottom: 1px solid lightgray;
-}
-
-.page-container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  background: black;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.links h2 {
-  padding-bottom: 10px;
-  font-size: 30px;
-}
-
-.links ul li {
-  padding: 10px 0px;
-  border-bottom: rgb(75, 75, 75) 1px solid;
-}
-
-.links ul li:last-child {
-  border-bottom: none;
-}
-
-.profile-intro {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 40px;
-  margin: 20px 0;
-}
-
-.profile-intro h3 {
-  padding: 0 0 10px 0;
-}
-
-.profile-intro a {
-  color: darkgray;
-}
-
-.profile-intro a:hover {
-  color: lightgray;
-}
-
-.box-1 p, .box-2 p, .box-3 p, .box-4 p {
-  padding-bottom: 14px;
-}
-
-.box-3{
-  display: flex;
-  padding-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-
-.box-3 ul li h5 {
-  display: inline;
-  font-size: 15px;
-}
-
-.box-3 ul li:last-child {
-  padding-bottom: 14px;
-}
-
-.box-3 .logos {
-  display: none;
-  width: 50%;
-}
-
-.modules {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.module-r {
-  text-align: end;
-}
-
-.footer {
-  background: black;
-  color: lightgray;
-  font-size: 12px;
-  padding: 20px 0;
-}
-
-.footer-inner {
-  width: 100%;
-  max-width: 1100px;
-  padding: 0 20px 0 20px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center; 
-  justify-content: space-between;
-}
-
-.footer div {
-  margin-bottom: 0px;
-  display: flex;
-  align-items: center;
-}
-
-.footer ul {
-  display: none;
-  flex-wrap: wrap;
-}
-
-.footer li {
-  margin-right: 30px;
-  margin-bottom: 0px;
-}
-
-@media(max-width: 700px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .menu-btn:hover {
-    opacity: 0.5;
-  }
-
-  .main-nav ul.right-menu {
-    margin-right: 50px;
-  }
-
-  .main-nav ul.main-menu {
-    display: block;
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    background: black;
-    width: 50%;
-    height: 100%;
-    border-right: rgb(75, 75, 75) 3px solid;
-    opacity: 0.9;
-    padding: 30px;
-    transform: translateX(-500px);
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .main-nav ul.main-menu li {
-    padding: 10px;
-    border-bottom: rgb(75, 75, 75) 1px solid;
-    font-size: 14px;
-  }
-
-  .main-nav ul.main-menu li:last-child {
-    border-bottom: 0;
-  }
-
-  .main-nav ul.main-menu.show {
-    transform: translateX(-20px)
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-    margin: 20px 50px;
-  }
-
-  .cards img {
+.toolbar {
     width: 100%;
-    margin-bottom: 20px;
-  }
+    /* Full width */
+    background: transparent;
+    /* Temporary background color for visibility */
+    overflow: hidden;
+    /* Clear floats */
+}
 
-  .profile-intro {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 40px;
-    margin: 20px 0;
-  }
+.toolbar ul {
+    list-style: none;
+    /* Remove list bullets */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    justify-content: center;
+    /* Center the items horizontally */
+}
 
-  .modules {
-    display: grid;
-  }
+.toolbar li {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    /* Add some padding around each nav item */
+}
 
-  .module-l {
-    padding-bottom: 14px;
-  }
+.toolbar a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #F8F9FA;
+    /* Set a text color */
+    font-family: 'Italiana', serif;
+    /* Apply the 'Italiana' font */
+    font-size: 20px;
+    /* Adjust the font size as needed */
+    transition: color 0.3s ease;
+    /* This enables the smooth color transition */
+}
 
-  .module-r {
-    text-align: left;
-  }
+/* Add a hover effect for navigation items */
+.toolbar a:hover {
+    color: #FF0054;
+    /* Lighten the color on hover */
+    transition: color 0.3s ease;
+    /* This ensures the transition also applies when mouse leaves the link */
+}
+
+#landing {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #343A40;
+    /* Text color */
+    font-family: 'Italiana', serif;
+}
+
+.full-width-name {
+    position: absolute;
+    z-index: 1;
+    /* Lower z-index so it's under the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Let the height be automatic */
+    font-size: calc(15vw + 15vh);
+    /* Adjust the size as needed */
+    line-height: 1;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-justified {
+    align-self: flex-start;
+    padding-left: 24px;
+    /* Adds some space on the left */
+}
+
+.right-justified {
+    align-self: flex-end;
+    padding-right: 24px;
+    /* Adds some space on the right */
+}
+
+.image-container {
+    position: absolute;
+    z-index: 2;
+    /* Higher z-index so it's above the text */
+    top: 25vh;
+    left: 20vw;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 20vw;
+    object-fit: cover;
+    /* Cover the area without stretching */
+    display: block;
+    /* Remove any extra space below the image */
+    opacity: 0.5;
+}
+
+
+.left-justified,
+.right-justified {
+    /* ... other styles ... */
+    user-select: none;
+    /* Prevent text from being selectable */
+}
+
+
+/* Style for the About Section */
+#about {
+    /* Add your styles for the about section */
+}
+
+/* Style for the Projects Section */
+#projects {
+    /* Add your styles for the projects section */
+}
+
+/* Style for the Contact Section */
+#contact {
+    /* Add your styles for the contact section */
+}
+
+footer {
+    /* Add your styles for the footer */
 }

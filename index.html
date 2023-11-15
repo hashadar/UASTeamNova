@@ -1,93 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="Hasha Dar">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-    crossorigin="anonymous" />
-  <title>Hasha Dar | Home</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasha Dar - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-  <div class="menu-btn">
-    <i class="fas fa-bars fa-2x"></i>
-  </div>
-  <div class="container">
-    <nav class="main-nav">
-      <a href="index.html"><img src="./img/hashadarlogo.png" alt="Hasha Dar" class="logo"></a>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="toolbar">
+            <ul>
+                <li><a href="#index">HASHA DAR</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <ul class="main-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="https://hashadar.com" target="blank">Photography</a></li>
-      </ul>
+    <main>
+        <!-- landing page Section -->
+        <section id="landing">
+            <div class="full-width-name">
+                <span class="left-justified">hasha</span>
+                <span class="right-justified">dar</span>
+            </div>
+            <div class="selectDisable">
+                <div class="image-container">
+                    <img src="assets/images/img1.jpg" alt="Hasha Dar">
+                </div>
+            </div>
 
-      <ul class="right-menu">
-        <li>
-          <a href="https://www.instagram.com/hashadar/"><i class="fab fa-instagram" target="blank"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=100010145407142" target="blank"><i
-              class="fab fa-facebook-square"></i></a>
-          <a href="https://www.linkedin.com/in/hashadar/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+        </section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="profile-photo">
+                <!-- Profile photo will go here -->
+            </div>
+            <div class="about-content">
+                <!-- About info will go here -->
+            </div>
+        </section>
 
-  <header class="showcase">
-    <img src="./img/hashadarlogo.png" alt="Hasha Dar" class="logo-showcase">
-    <!--<h1>Hasha Dar</h1>-->
-    <p>
-      Aspiring Motorsport Engineer studying Mechanical Engineering MEng at University College London.
-    </p>
-  </header>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <!-- Project items will go here -->
+        </section>
 
-  <div class="container">
-    <section class="cards">
-      <div>
-        <img src="./img/profilepic.jpg" alt="Profile">
-        <h3>Profile</h3>
-        <p>Academics, Skills, Interests.</p>
-        <a href="profile.html">Click to view</a>
-      </div>
-      <div>
-        <img src="./img/projectpic.png" alt="Profile">
-        <h3>Project Work</h3>
-        <p>A portfolio of university and personal project work.</p>
-        <a href="#">Click to view</a>
-      </div>
-      <div>
-        <img src="./img/LogoHDP3White.png" alt="Profile">
-        <h3>Photography</h3>
-        <p>Link to my photography portfolio.</p>
-        <a href="https://www.hashadar.com" target="blank">Click to view</a>
-      </div>
-    </section>
-  </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <!-- Contact form or info will go here -->
+        </section>
+    </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <p>Hasha Dar &copy; 2020</p>
-      </div>
-      <div>
-        <ul>
-          <li><a href="#">item 1</a></li>
-          <li><a href="#">item 2</a></li>
-          <li><a href="#">item 3</a></li>
-          <li><a href="#">item 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
 
-  <script src="./js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
