@@ -22,6 +22,10 @@ body {
     /* Hide horizontal scroll */
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .selectDisable {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -42,13 +46,25 @@ body {
     /* Sets the default font for the page */
 }
 
+main {
+    padding-top: 70px;
+    /* Adjust the value based on the height of your toolbar */
+    /* Rest of your styles... */
+}
+
 .toolbar {
+    position: fixed;
+    /* Fixed position relative to the viewport */
+    top: 0;
+    /* Align to the top of the viewport */
+    left: 0;
+    /* Align to the left of the viewport */
     width: 100%;
-    /* Full width */
+    /* Span the full width of the viewport */
     background: transparent;
-    /* Temporary background color for visibility */
-    overflow: hidden;
-    /* Clear floats */
+    /* Your preferred background color */
+    z-index: 1000;
+    /* High z-index to ensure the toolbar is above other content */
 }
 
 .toolbar ul {
@@ -136,25 +152,6 @@ body {
     /* Adds some space on the right */
 }
 
-.image-container {
-    position: absolute;
-    z-index: 2;
-    /* Higher z-index so it's above the text */
-    top: 25vh;
-    left: 20vw;
-    width: 100%;
-    height: 100%;
-}
-
-.image-container img {
-    width: 20vw;
-    object-fit: cover;
-    /* Cover the area without stretching */
-    display: block;
-    /* Remove any extra space below the image */
-    opacity: 0.5;
-}
-
 
 .left-justified,
 .right-justified {
@@ -163,10 +160,232 @@ body {
     /* Prevent text from being selectable */
 }
 
+.tag-lines {
+    position: absolute;
+    top: 60vh;
+    /* Adjust based on your actual layout */
+    left: 20vw;
+    transform: translateX(-50%);
+    width: 80%;
+    /* Adjust if necessary */
+    text-align: left;
+    z-index: 3;
+    /* Make sure it's above the image and text */
+}
+
+.tag-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    /* Space between lines */
+}
+
+.line {
+    width: 50%;
+    /* Adjust based on design */
+    margin-right: 1rem;
+    /* Space between line and text */
+}
+
+.tag-text {
+    color: #F8F9FA;
+    white-space: nowrap;
+    /* Ensure text does not wrap */
+    font-family: 'Roboto', sans-serif;
+    /* Use your desired font here */
+    font-size: 1rem;
+    /* Adjust to your preference */
+}
+
+.tag-line:nth-child(1) .line {
+    border: 1px solid #FF0054;
+    /* First line color */
+}
+
+.tag-line:nth-child(2) .line {
+    border: 1px solid #FB36FF;
+    /* Second line color */
+}
+
+.tag-line:nth-child(3) .line {
+    border: 1px solid #42FFED;
+    /* Third line color */
+}
+
+/* ... Rest of your styles ... */
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+    /* Align to the second column from the right */
+    width: calc(20% - 40px);
+    /* Assuming each column is 20% and adjusting for margins */
+    height: auto;
+    z-index: 2;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    opacity: 0.8;
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 30%;
+    /* Adjust as necessary to align with 'hasha' */
+    right: 10%;
+    /* Adjust as necessary for spacing from the right edge */
+    z-index: 4;
+    /* Ensure it's above other elements */
+    cursor: pointer;
+    /* Change cursor to indicate interactivity */
+}
+
+.scroll-wheel {
+    width: 24px;
+    /* Size of the scroll indicator */
+    height: 24px;
+    /* Size of the scroll indicator */
+    border: 2px solid #DEE2E6;
+    /* Scroll wheel color */
+    border-radius: 12px;
+    /* Half of the width/height to make it round */
+    position: relative;
+}
+
+.scroll-wheel::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    width: 2px;
+    /* Width of the scroll line */
+    height: 8px;
+    /* Height of the scroll line */
+    background-color: #DEE2E6;
+    /* Scroll line color */
+    transform: translateX(-50%);
+    animation: scroll-wheel-animation 2s infinite;
+    /* Apply the animation */
+}
+
+/* Keyframes for the scroll wheel animation */
+.scroll-wheel::before {
+    /* ... existing styles ... */
+    animation: scroll-wheel-animation 2s infinite;
+    /* Apply the animation */
+}
+
+@keyframes scroll-wheel-animation {
+    0% {
+        top: 4px;
+        opacity: 0;
+        background-color: #FF0054;
+        /* Starting color */
+    }
+
+    30% {
+        opacity: 1;
+        background-color: #FB36FF;
+        /* Intermediate color */
+    }
+
+    70% {
+        top: 12px;
+        opacity: 1;
+        background-color: #42FFED;
+        /* End color */
+    }
+
+    100% {
+        top: 12px;
+        opacity: 0;
+        background-color: #42FFED;
+        /* Ensure it fades out to the same end color */
+    }
+}
+
+
+.scroll-indicator:hover .scroll-wheel {
+    animation-play-state: paused;
+    /* Pause animation on hover */
+}
+
 
 /* Style for the About Section */
 #about {
-    /* Add your styles for the about section */
+    position: relative;
+    padding: 80px 20px;
+    /* Adjust the padding to match your layout */
+    background-color: #212529;
+    /* Background color */
+    color: #F8F9FA;
+    /* Text color */
+    display: flex;
+    justify-content: space-around;
+    /* Or any other spacing that fits your design */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    min-height: 100vh;
+    /* Minimum height to make sure 'about' covers the viewport */
+}
+
+.about-background-text {
+    font-family: 'Italiana', serif;
+    font-size: calc(15vw + 15vh);
+    /* Adjust the size as needed for your design */
+    color: rgba(255, 255, 255, 0.1);
+    /* Light white text for a watermark-like effect */
+    position: absolute;
+    bottom: 0;
+    /* Align to the bottom of the viewport */
+    left: 40%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Center the text in the viewport horizontally */
+    z-index: 0;
+    /* Place it behind the content */
+    pointer-events: none;
+    /* Makes the text non-interactive */
+    width: 100vw;
+    /* Ensure it spans the full width of the viewport */
+    text-align: center;
+    /* Center the text if it's on multiple lines */
+}
+
+
+.about-content {
+    z-index: 1;
+    /* Higher than the background text */
+    width: calc(100% / 6 * 4);
+    /* Adjust based on your column layout */
+    /* Rest of your styles for about content */
+    margin-right: 20px;
+    /* 20px gutter */
+}
+
+.about-image {
+    width: calc(150% / 6);
+    /* Taking up 1/6 columns */
+    display: flex;
+    justify-content: center;
+    /* Center the image in the column */
+    align-items: flex-start;
+    /* Align the image to the top */
+}
+
+.about-image img {
+    width: 100%;
+    /* Make the image take up the entire column width */
+    height: auto;
+    /* Keep the image's aspect ratio */
+    object-fit: cover;
+    /* Cover the area of the container without stretching */
 }
 
 /* Style for the Projects Section */
