@@ -26,6 +26,18 @@ body {
     box-sizing: border-box;
 }
 
+.red {
+    color: #FF0054;
+}
+
+.pink {
+    color: #FB36FF;
+}
+
+.blue {
+    color: #42FFED;
+}
+
 .selectDisable {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -244,8 +256,8 @@ main {
     grid-column: 2/3;
 }
 
-.third-column {
-    grid-column: 3/4;
+.fourth-column {
+    grid-column: 4/5;
 }
 
 .scroll-indicator {
@@ -340,7 +352,12 @@ main {
     color: #343A40;
     /* Text color */
     font-family: 'Italiana', serif;
-    margin-bottom: 5vh;
+}
+
+#about .content-item:first-child {
+    padding-top: 400px;
+    /* Adjust the value as needed */
+    color: #F8F9FA;
 }
 
 .about-background-text {
@@ -378,7 +395,6 @@ main {
     color: #343A40;
     /* Text color */
     font-family: 'Italiana', serif;
-    margin-bottom: 5vh;
 }
 
 .projects-background-text {
@@ -461,15 +477,33 @@ main {
 
 footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 20px;
+    grid-template-columns: auto 1fr;
+    /* Adjusted for two columns */
+    align-items: center;
+    padding: 24px;
     background-color: #343A40;
-    color: #fff;
-    text-align: center;
+    color: #F8F9FA;
 }
 
-.footer-column {
-    padding: 10px;
+.footer-content {
+    /* Styles for the left side content */
+    padding-left: 96px;
+}
+
+.footer-large-text {
+    font-size: 96px;
+    /* Large font size for "Hasha Dar" */
+    text-align: right;
+    /* Align to the right */
+    padding-right: 96px;
+    /* Optional padding for aesthetics */
+    font-family: 'Italiana', serif;
+    color: #F8F9FA;
+}
+
+footer div,
+footer a {
+    line-height: 1.5;
 }
 
 /* Style for links */
@@ -477,6 +511,7 @@ footer a {
     color: #F8F9FA;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: block;
 }
 
 footer a:hover {
